@@ -17,19 +17,19 @@ class Super_heroes():
 
 class Spider_man(Super_heroes):
 
-    def __init__(self, Name, Age, Surname, Quarter_grade, Weight):
+    def __init__(self, Name, Age, alias, Quarter_grade, Weight):
         super().__init__(Name, Age, Weight)
         self.Quarter_grade = Quarter_grade
-        self.Surname = Surname
+        self.alias = alias
 
     def Threw_a_web(self):
-        print(self.Name.title() + 'бросил паутину')
+        print(self.Name + ' бросил паутину')
 
     def Got_an_A(self):
-        print(self.Name.title() + 'получил пятёрку')
+        print(self.Name.title() + ' получил пятёрку')
 
 
-Spider_man1 = Spider_man('Питер', 16, 'паркер', 5, '76 KG')
+Spider_man1 = Spider_man('Человек-паук', 16, 'Питер Паркер', 5, '76 KG')
 
 
 class Hulk(Super_heroes):
@@ -43,10 +43,10 @@ class Hulk(Super_heroes):
         print(self.Name.title() + ' стал халком ')
 
     def Became_a_human(self):
-        print(self.Name.title() + ' стал халком ')
+        print(self.Name.title() + ' стал человеком ')
 
 
-Hulk1 = Hulk('Брюс', '?', '58,522', 229, 175)
+Hulk1 = Hulk('халк', '?', '58,522', 229, 175)
 
 
 class Captain_America(Super_heroes):
@@ -63,7 +63,7 @@ class Captain_America(Super_heroes):
         print('к сожелению ' + self.Name.title + ' погиб в бою ')
 
 
-Captain_America1 = Captain_America('Стив', 92, '109KG', 188, 'man')
+Captain_America1 = Captain_America('капитан-америка ', 92, '109KG', 188, 'man')
 
 
 class Iron_man(Super_heroes):
@@ -80,7 +80,7 @@ class Iron_man(Super_heroes):
         print(self.Name.title + ' выстрельнул')
 
 
-Iron_man1 = Iron_man('Энтони', 53, '90KG', '10%', 10000000000000000000000000000000000)
+Iron_man1 = Iron_man('железный-человек', 53, '90KG', '10%', 10000000000000000000000000000000000)
 
 
 class Tor(Captain_America):
@@ -97,4 +97,7 @@ class Tor(Captain_America):
         print(self.Name.title + 'взлетел')
 
 
-Tor1 = Tor('tor', 1500, '?', 198, 'man', 'good', 'Jane')
+Tor1 = Tor('тор', 1500, '?', 198, 'man', 'good', 'Jane')
+
+Spider_man1.Threw_a_web()
+Spider_man1.Saved_people()
